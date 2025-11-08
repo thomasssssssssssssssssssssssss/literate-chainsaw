@@ -2,228 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <title>Rodders Academy — Official Gallery</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Starter — Your Site Name</title>
-
-  <!-- SEO basics -->
-  <meta name="description" content="A clean, fast, and accessible starter template for a small website." />
-  <link rel="canonical" href="https://example.com/" />
-
-  <!-- Social cards (fill with your values) -->
-  <meta property="og:title" content="Your Site Name" />
-  <meta property="og:description" content="A clean starter template." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:image" content="https://example.com/og.jpg" />
-  <meta name="twitter:card" content="summary_large_image" />
-
-  <!-- Favicons (replace with real files) -->
-  <link rel="icon" href="/favicon.ico" sizes="any" />
-  <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
-
-  <!-- Fonts (optional) -->
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
+  <meta name="description" content="Mucho más que una escuela: comunidad, técnica y juego sobre la rueda.">
+  <meta property="og:title" content="Rodders Academy — Official Gallery">
+  <meta property="og:description" content="Comunidad, técnica y juego sobre la rueda.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:,">
   <style>
-    :root{
-      --bg: #0b0c0f;      /* background */
-      --panel: #13151a;   /* surfaces */
-      --text: #e6e8ec;    /* primary text */
-      --muted:#a7adbb;    /* secondary text */
-      --brand:#8b5cf6;    /* accent */
-      --brand-2:#22d3ee;  /* secondary accent */
-      --ring: rgba(139,92,246,.35);
-    }
-
-    @media (prefers-color-scheme: light) {
-      :root{ --bg:#f7f8fa; --panel:#ffffff; --text:#0f172a; --muted:#475569; --brand:#6d28d9; --brand-2:#0891b2; --ring: rgba(109,40,217,.25);}  
-    }
-
+    :root { --bg:#0b0b0d; --card:#141418; --accent:#e8e8ec; --muted:#a0a0ad; }
     * { box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
-    body{
-      margin:0; font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, Noto Sans, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      color:var(--text); background:radial-gradient(1200px 600px at 80% -10%, rgba(139,92,246,.15), transparent 60%), radial-gradient(1000px 500px at 0% 0%, rgba(34,211,238,.14), transparent 60%), var(--bg);
-      line-height:1.55;
-    }
-    a{ color:inherit; text-decoration: none; }
-    .container{ width:min(1100px, 92vw); margin-inline:auto; }
-    .btn{ display:inline-flex; align-items:center; gap:.6rem; padding:.8rem 1.1rem; border-radius:12px; border:1px solid color-mix(in oklab, var(--brand) 55%, transparent); background:linear-gradient(180deg, color-mix(in oklab, var(--brand) 18%, transparent), color-mix(in oklab, var(--brand-2) 18%, transparent)); color:var(--text); font-weight:600; box-shadow: 0 10px 30px -12px var(--ring); transition: transform .18s ease, box-shadow .18s ease; }
-    .btn:hover{ transform: translateY(-1px); box-shadow: 0 16px 40px -16px var(--ring); }
-    .btn.secondary{ background:transparent; border-color: color-mix(in oklab, var(--text) 15%, transparent); }
-
-    /* Header */
-    header{ position:sticky; top:0; z-index:50; backdrop-filter: saturate(1.1) blur(10px); background: color-mix(in oklab, var(--bg) 75%, transparent); border-bottom: 1px solid rgba(255,255,255,.06); }
-    .nav{ display:flex; align-items:center; justify-content:space-between; padding: .9rem 0; }
-    .brand{ display:flex; align-items:center; gap:.6rem; font-weight:700; letter-spacing:.2px; }
-    .brand .dot{ width:10px; height:10px; border-radius:50%; background:conic-gradient(var(--brand), var(--brand-2)); box-shadow:0 0 0 6px rgba(139,92,246,.08); }
-    nav ul{ display:flex; gap:1.1rem; list-style:none; padding:0; margin:0; }
-    nav a{ padding:.5rem .7rem; border-radius:10px; color: var(--muted); }
-    nav a.active, nav a:hover{ color: var(--text); background: rgba(255,255,255,.06); }
-    .menu-toggle{ display:none; }
-
-    /* Hero */
-    .hero{ padding: 5.5rem 0 3.25rem; text-align:center; }
-    .eyebrow{ color: var(--brand-2); font-weight:700; letter-spacing:.14em; text-transform:uppercase; font-size:.8rem; }
-    .h1{ font-size: clamp(2rem, 5vw, 3.2rem); font-weight:800; margin:.6rem 0 1rem; letter-spacing:-.02em; }
-    .lede{ max-width: 62ch; margin-inline:auto; color: var(--muted); font-size: 1.05rem; }
-    .cta{ margin-top:1.6rem; display:flex; gap:.8rem; justify-content:center; flex-wrap:wrap; }
-
-    /* Features */
-    .features{ padding: 3.5rem 0; }
-    .grid{ display:grid; grid-template-columns: repeat(3, 1fr); gap:1.2rem; }
-    .card{ background: var(--panel); border:1px solid rgba(255,255,255,.06); padding: 1.2rem; border-radius:16px; box-shadow: 0 8px 30px -18px rgba(0,0,0,.5); }
-    .card h3{ margin:.2rem 0 .6rem; font-size:1.05rem; }
-    .kicker{ display:inline-block; font-weight:700; color: var(--brand); margin-bottom:.2rem; font-size:.8rem; letter-spacing:.12em; text-transform:uppercase; }
-    .muted{ color: var(--muted); }
-
-    /* Section: content */
-    section.content{ padding: 3.5rem 0; }
-    .two-col{ display:grid; grid-template-columns: 1.05fr .95fr; gap: 2rem; align-items:center; }
-    .panel{ background: var(--panel); padding: 1.2rem; border-radius: 16px; border:1px solid rgba(255,255,255,.06); }
-
-    /* Footer */
-    footer{ padding: 3rem 0; color: var(--muted); border-top: 1px solid rgba(255,255,255,.06); }
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .grid{ grid-template-columns:1fr 1fr; }
-      .two-col{ grid-template-columns: 1fr; }
-    }
-    @media (max-width: 640px){
-      nav ul{ display:none; position:absolute; right:4%; top:56px; background: var(--panel); padding:.6rem; border:1px solid rgba(255,255,255,.08); border-radius:12px; flex-direction:column; width:min(260px, 88vw); }
-      .menu-toggle{ display:inline-flex; align-items:center; gap:.5rem; padding:.55rem .7rem; border:1px solid rgba(255,255,255,.12); border-radius:10px; color:var(--muted); background:transparent; }
-      .menu-open nav ul{ display:flex; }
-      .grid{ grid-template-columns:1fr; }
-    }
-
-    /* Accessibility: reduce motion */
-    @media (prefers-reduced-motion: reduce){
-      html { scroll-behavior: auto; }
-      .btn{ transition:none; }
-    }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif; background:var(--bg); color:#fff; }
+    a { color:#fff; text-decoration:none; }
+    .wrap { max-width:1000px; margin:0 auto; padding:24px; }
+    header { display:grid; grid-template-columns:72px 1fr auto; gap:16px; align-items:center; }
+    .logo { width:72px; height:72px; border-radius:16px; background:linear-gradient(135deg,#333,#111); display:grid; place-items:center; font-weight:700; }
+    .title { line-height:1.1; margin:0; font-size:clamp(24px,4vw,36px); }
+    .tag { color:var(--muted); margin-top:6px; font-size:14px; }
+    .btn { padding:10px 14px; border:1px solid #2a2a33; border-radius:12px; background:#1a1a22; }
+    .hero { margin:28px 0 12px; color:var(--accent); font-size:clamp(16px,2.6vw,18px); }
+    .grid { display:grid; grid-template-columns:1fr; gap:18px; }
+    @media (min-width:620px){ .grid { grid-template-columns:1fr 1fr; } }
+    @media (min-width:900px){ .grid { grid-template-columns:1fr 1fr 1fr; } }
+    .card { background:var(--card); border:1px solid #22232b; border-radius:14px; padding:10px; }
+    .cta { display:grid; grid-template-columns:1fr; gap:10px; margin:28px 0; }
+    .input, textarea { width:100%; background:#101014; border:1px solid #272734; color:#fff; border-radius:10px; padding:10px 12px; }
+    textarea { min-height:120px; resize:vertical; }
+    .submit { background:#2b2bf6; border:none; color:#fff; padding:12px 14px; border-radius:12px; font-weight:600; cursor:pointer; }
+    footer { margin:24px 0 8px; color:var(--muted); font-size:13px; text-align:center; }
   </style>
 </head>
 <body>
-  <header>
-    <div class="container nav" role="navigation" aria-label="Main Navigation">
-      <a class="brand" href="#home" aria-label="Go to home">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Brand</span>
-      </a>
-      <button class="menu-toggle" aria-expanded="false" aria-controls="menu">☰ Menu</button>
-      <nav>
-        <ul id="menu">
-          <li><a class="active" href="#home">Home</a></li>
-          <li><a href="#features">Features</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main id="home" class="hero container">
-    <p class="eyebrow">Launch faster</p>
-    <h1 class="h1">A modern, accessible HTML starter template</h1>
-    <p class="lede">Drop this single file into any folder and you have a clean, responsive, and SEO‑friendly base. It includes sticky nav, grid cards, content blocks, and a polished dark/light palette that respects user preferences.</p>
-    <div class="cta">
-      <a class="btn" href="#features">Explore features</a>
-      <a class="btn secondary" href="#contact">Get in touch</a>
-    </div>
-  </main>
-
-  <section id="features" class="features container" aria-label="Key features">
-    <div class="grid">
-      <article class="card">
-        <span class="kicker">Performance</span>
-        <h3>Lightweight by default</h3>
-        <p class="muted">Single file, no frameworks required. Add any build tools later if you need them.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Accessibility</span>
-        <h3>Inclusive and usable</h3>
-        <p class="muted">Semantic HTML, visible focus, and motion preferences respected out of the box.</p>
-      </article>
-      <article class="card">
-        <span class="kicker">Design</span>
-        <h3>Modern & responsive</h3>
-        <p class="muted">Fluid typography, grid layout, and a tasteful dark/light color system.</p>
-      </article>
-    </div>
-  </section>
-
-  <section id="about" class="content container">
-    <div class="two-col">
+  <div class="wrap">
+    <header>
+      <div class="logo">RA</div>
       <div>
-        <h2>About this template</h2>
-        <p>Use this as a foundation for landing pages, small sites, or documentation. The CSS uses custom properties so you can theme it quickly. The layout components (hero, grid cards, split content) cover common needs without bloat.</p>
-        <ul class="muted">
-          <li>Editable CSS variables in <code>:root</code></li>
-          <li>Sticky, accessible header with mobile menu</li>
-          <li>Cards grid, two-column content panel</li>
-          <li>Ready SEO and social tags</li>
-        </ul>
-        <p><a class="btn" href="#contact">Call to action</a></p>
+        <h1 class="title">Rodders Academy</h1>
+        <p class="tag">@rodders.academy • <a href="https://www.instagram.com/rodders.academy/" target="_blank" rel="noopener">Instagram</a></p>
       </div>
-      <div class="panel">
-        <h3>Quick theming</h3>
-        <p class="muted">Swap <code>--brand</code> and <code>--brand-2</code> for your palette. Update the <code>title</code>, descriptions, and social meta tags for production.</p>
-        <pre><code>:root{
-  --brand: #e11d48; /* rose */
-  --brand-2: #22c55e; /* green */
-}</code></pre>
+      <a class="btn" href="mailto:hello@example.com">Contact</a>
+    </header>
+
+    <p class="hero">Mucho más que una escuela: formamos comunidad, potenciamos talentos y abrazamos la innovación sin perder el espíritu de equipo.</p>
+
+    <!-- GALLERY -->
+    <section class="grid" id="gallery">
+      <!-- Each post is a lightweight Instagram embed -->
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DMqgLR5xCy2/" data-instgrm-version="14"></blockquote>
       </div>
-    </div>
-  </section>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/C4q4F0gppvN/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOZVPevgNNe/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DO694LcAFzy/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DN_ySDNgEDl/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DP9Cy_dgG16/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DOPU0zBgIZ8/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DPrVOr2AEoX/" data-instgrm-version="14"></blockquote>
+      </div>
+      <div class="card">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DElKGFppKKv/" data-instgrm-version="14"></blockquote>
+      </div>
+    </section>
 
-  <section id="contact" class="content container">
-    <h2>Contact</h2>
-    <p class="muted">Use this simple form as a starting point. Hook it to your backend or a form service.</p>
-    <form class="panel" action="#" method="post" novalidate>
-      <label for="name">Name</label>
-      <input id="name" name="name" type="text" placeholder="Ada Lovelace" required style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--text);margin:.4rem 0 1rem;" />
+    <!-- CONTACT (optional) -->
+    <section class="cta">
+      <h2 style="margin:0">Get in touch</h2>
+      <!-- Replace the action with your Formspree endpoint -->
+      <form action="https://formspree.io/f/XXXXXXXX" method="POST">
+        <input class="input" type="email" name="email" placeholder="Email" required>
+        <textarea class="input" name="message" placeholder="Your message" required></textarea>
+        <button class="submit" type="submit">Send</button>
+      </form>
+      <p class="tag">Tip: create a free endpoint at formspree.io and paste it in the <code>action</code> above.</p>
+    </section>
 
-      <label for="email">Email</label>
-      <input id="email" name="email" type="email" placeholder="you@example.com" required style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--text);margin:.4rem 0 1rem;" />
+    <footer>© <span id="year"></span> Rodders Academy • Built from public Instagram embeds.</footer>
+  </div>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="4" placeholder="Hi! I'd like to learn more..." style="width:100%;padding:.7rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:transparent;color:var(--text);margin:.4rem 0 1rem;"></textarea>
-
-      <button class="btn" type="submit">Send</button>
-    </form>
-  </section>
-
-  <footer>
-    <div class="container">
-      <p>© <span id="year"></span> Your Company. All rights reserved.</p>
-    </div>
-  </footer>
-
-  <script>
-    // Mobile menu toggle
-    const root = document.documentElement;
-    const header = document.querySelector('header');
-    const toggle = document.querySelector('.menu-toggle');
-    const container = document.body;
-
-    toggle?.addEventListener('click', () => {
-      const open = container.classList.toggle('menu-open');
-      toggle.setAttribute('aria-expanded', String(open));
-    });
-
-    // Set dynamic year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // Close menu when a nav link is clicked (mobile)
-    document.querySelectorAll('nav a').forEach(a => {
-      a.addEventListener('click', () => {
-        container.classList.remove('menu-open');
-        toggle?.setAttribute('aria-expanded', 'false');
-      });
-    });
-  </script>
+  <!-- Instagram embed script (official) -->
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script>document.getElementById('year').textContent=new Date().getFullYear();</script>
 </body>
 </html>
+
